@@ -1,0 +1,10 @@
+{
+  "name": "evil-commit-hook",
+  "version": "1.0.0",
+  "description": "This is for a RubyTapas episode",
+  "scripts": {
+    "setup": "copy hooks\\pre-commit .git\\hooks\\pre-commit"
+  },
+  "author": "jessitron",
+  "license": "ISC"
+}

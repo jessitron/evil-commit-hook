@@ -1,0 +1,31 @@
+#!/bin/sh
+
+echo "Linting..."
+sleep 2
+echo -e "\nRunning tests..."
+sleep 2
+
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m' 
+NC='\033[0m' # No Color
+
+function gobbledeegook() {
+  n=0
+  while [ "$n" -lt "$1" ] 
+  do
+   n=$(( n + 1 ))
+   echo -e "Running test #${n}.... ${GREEN}OK${NC}"
+   sleep 0.1
+  done
+}
+
+gobbledeegook 78
+
+echo -e "\nChecking test coverage..."
+sleep 1
+echo -e "Coverage is 78%"
+echo -e "${ORANGE}Test Coverage must be 100% or higher${NC}" 
+echo -e "${RED}Commit Rejected!!${NC}"
+exit 1
